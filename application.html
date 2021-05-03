@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<head>
+<link rel="icon" type="image/png" href="Images/ksu.png"/>
+<title>Application</title>
+<link type="text/css" rel="stylesheet" href="stylesheet.css">
+<script>
+
+  function showInput() {
+  if(document.getElementById('fname').value.length > 0 && document.getElementById('lname').value.length> 0 && document.getElementById('email').value.length > 0 &&  document.getElementById('pnum').value.length >0&&document.querySelector('input[name="position"]:checked').value.length > 0&&document.getElementById('location').value.length>0){
+		
+        document.getElementById('myId').innerHTML = "<h2>Your application has been submitted.</br>Good luck! If you notice an error in your application, please contact us.</h2></br></br><h3>Employment Application</h3></br></br>First Name: "+document.getElementById('fname').value+"</br></br>Last Name: "+document.getElementById('lname').value+"</br></br>Email Address: "+document.getElementById('email').value+"<br></br>Phone Number: "+document.getElementById('pnum').value+"</br></br>Position: "+document.querySelector('input[name="position"]:checked').value+"</br></br>Location: "+document.getElementById('location').value;
+        
+		
+					}
+    }
+</script>
+</head>
+<body>
+<div class ="header">
+<a href="https://ccse.kennesaw.edu/it/">
+<img src="Images/ksu_logo.png" alt="ksu logo" width="350" height="150"class="center">
+</a>
+<h1>Center for Applied Research in Information Technology</h1>
+</br>
+</div>
+<div class="nav">
+<ul>
+<li><a href="index.html">Home</a></li>
+<li><a href="faculty.html">Faculty</a></li>
+<li><a href="resources.html">Resources</a></li>
+<li><a href="evaluation.html">Evaluation</a></li>
+</ul>
+</div>
+<div class="sidebar">
+<h2><u>Page Layout</u></h2>
+<ul>
+<li><p>Application</p></li>
+<li><p>Contact Information</p></li>
+</ul>
+</div>
+<div id="myId" class="main center">
+<h2 id="head">Please Complete the Application</h2>
+<p style="color:red">* Required Field</p>
+<form>
+<label for="fname">First name:<span style="color:red">*</span></label>
+<input id="fname" name="fname" type="text" required></br></br>
+<label for="lname">Last name:<span style="color:red">*</span> </label>
+<input id="lname" name="lname" type="text" required></br></br>
+<label for="email">Email Address:<span style="color:red">*</span> </label>
+<input id="email" name="email" type="text" required></br></br>
+<label for="pnum">Phone Number:<span style="color:red">*</span> </label>
+<input id="pnum" name="pnum" type="pnum" required></br></br>
+<p>Which position are you applying for:<span style="color:red">*</span></p>
+<input type="radio" id="radio" name="position" value="Web/Mobile Design (Undergraduates Only)" required>
+<label for="radio">Web/Mobile Design (Undergraduates Only)</label></br>
+<input type="radio" id="radio1" name="position" value="Database Design (Undergraduates Only)" required>
+<label for="radio1">Database Design (Undergraduates Only)</label></br>
+<input type="radio" id="radio2" name="position" value="Software Developer (Graduates Only)" required>
+<label for="radio2">Software Developer (Graduates Only)</label></br>
+<input type="radio" id="radio3" name="position" value="Data Analytics (Graduates Only)" required>
+<label for="radio3">Data Analytics (Graduates Only)</label></br></br>
+<p>Which days are you available to work: </p>
+ <input type="checkbox" id="day1" name="day" value="Monday">
+  <label for="day1">Monday</label><br>
+  <input type="checkbox" id="day2" name="day" value="Tuesday">
+  <label for="day2">Tuesday</label><br>
+  <input type="checkbox" id="day3" name="day" value="Wednesday">
+  <label for="day3">Wednesday</label></br>
+  <input type="checkbox" id="day4" name="day" value="Thursday">
+  <label for="day4">Thursday</label></br>
+  <input type="checkbox" id="day5" name="day" value="Friday">
+  <label for="day5">Friday</label></br></br>
+  <p>Which campus are you available at:<span style="color:red">*</span> </p>
+  <select name="location" id="location" autocomplete="off" required>
+    <option value="">Please Select</option>
+    <option value="Kennesaw">Kennesaw</option>
+    <option value="Marrietta">Marrietta</option>
+	<option value="Both Campuses">Both</option>
+  </select></br></br>
+<input type="submit" onclick="showInput();"></br>
+
+</form>
+ <p id="p""></p>
+</div>
+<div class="footer">
+<h2>University Contact</h2>
+<p><strong>Kennesaw Campus</strong></p>
+<p>1000 Chastain Road</p>
+<p>Kennesaw, GA 30144</p>
+<p>Phone: 470-578-6000</p>
+<p><strong>Marietta Campus</strong></p>
+<p>100 South Marietta Pkwy</p>
+<p>Marietta, GA 30060</p>
+<p>Phone: 470-578-6000</p>
+<p><em>2021. Disclaimer: This is a student project for IT 3203: Intro to Web Development</em><p>
+</div>
+</body>
+</html>

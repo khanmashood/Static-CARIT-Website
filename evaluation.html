@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<head>
+<link rel="icon" type="image/png" href="Images/ksu.png"/>
+<title>Evaluation</title>
+<link type="text/css" rel="stylesheet" href="stylesheet.css">
+<script type="text/javascript">
+var a = document.createElement('a');
+      var linkText = document.createTextNode("Application");
+      a.appendChild(linkText);
+      a.title = "my title text";
+      a.href = "application.html";
+var one = false;
+var two = false;
+var input1;
+var input2;
+var input3;
+function buttonclick()
+{
+if(one==false||two==false){
+document.getElementById('link1').removeChild(a);
+document.getElementById("p5").style.color = "red";
+document.getElementById("p5").innerHTML = "Input Student Status and/or Position.";
+}
+else{
+input3= (parseInt(document.getElementById('grade1').value) + parseInt(document.getElementById('grade2').value) + parseInt(document.getElementById('grade3').value) + parseInt(document.getElementById('grade4').value))/4 ; 
+if(input1=="Undergraduate" && input3>3.2)
+{
+document.getElementById("p5").style.color = "green";
+document.getElementById("p5").innerHTML = "Your Overall GPA is: "+input3+" Congratulations, you meet the requirement! Click this link to apply:"
+document.getElementById("link1").appendChild(a);
+}
+else if(input1=="Graduate"&& input3>3.7)
+{
+document.getElementById("p5").style.color = "green";
+document.getElementById("p5").innerHTML = "Your Overall GPA is: "+input3+" Congratulations, you meet the requirement! Click this link to apply:"
+document.getElementById("link1").appendChild(a);
+}
+else
+{
+document.getElementById('link1').removeChild(a);
+document.getElementById("p5").style.color = "black";
+document.getElementById("p5").innerHTML = "Your overall GPA is: "+input3+" Thank you for your interest, but you are not eligible to apply for this position."
+}
+}
+}
+function function1()
+{
+input1 = document.getElementById('student status').value;
+one = true;
+if(one==true&&two==true)
+{
+if(input1=="Undergraduate"&& input2=="Position 1")
+{
+document.getElementById("p1").innerHTML = "Course 1: CSE 3203 Mobile System Overview";
+document.getElementById("p2").innerHTML = "Course 2: IT 4213 Mobile Web Development";
+document.getElementById("p3").innerHTML = "Course 3: IT 4203 Advance Web Development";
+document.getElementById("p4").innerHTML = "Course 4: CGDD 4203 Mobile & Casual Game Development";
+}
+else if(input1== "Undergraduate"&&input2== "Position 2")
+{
+document.getElementById("p1").innerHTML = "Course 1: IT 4153 Advanced Database";
+document.getElementById("p2").innerHTML = "Course 2: IT 4713 BI Systems";
+document.getElementById("p3").innerHTML = "Course 3: IT 4723 IT Policy & Law";
+document.getElementById("p4").innerHTML = "Course 4: IT 4673 Virtual Systems";
+}
+else if(input1== "Graduate" && input2== "Position 1")
+{
+document.getElementById("p1").innerHTML = "Course 1: IT 6203 IT Design Studio";
+document.getElementById("p2").innerHTML = "Course 2: IT 6753 Advanced Web";
+document.getElementById("p3").innerHTML = "Course 3: IT 6763 Electronic Commerce";
+document.getElementById("p4").innerHTML = "Course 4: IT 6473 Multimedia Applications";
+}
+else if(input1== "Graduate" && input2== "Position 2")
+{
+document.getElementById("p1").innerHTML = "Course 1: IT 6713 Business Intelligence";
+document.getElementById("p2").innerHTML = "Course 2: IT 7113 Data Visualization";
+document.getElementById("p3").innerHTML = "Course 3: IT 6833 Wireless Security";
+document.getElementById("p4").innerHTML = "Course 4: IT 6583 Business Continuity Planning and Implementation";
+}
+else if(input1=="Please select")
+{
+one =false;
+input1 ="";
+document.getElementById("p1").innerHTML = "Course 1:";
+document.getElementById("p2").innerHTML = "Course 2:";
+document.getElementById("p3").innerHTML = "Course 3:";
+document.getElementById("p4").innerHTML = "Course 4:";
+}
+else if(input2=="Please select")
+{
+two = false;
+input2="";
+document.getElementById("p1").innerHTML = "Course 1:";
+document.getElementById("p2").innerHTML = "Course 2:";
+document.getElementById("p3").innerHTML = "Course 3:";
+document.getElementById("p4").innerHTML = "Course 4:";
+}
+else if(input2=="Please select" && input2 == "Please select")
+{
+one =false;
+two =false;
+input1="";
+input2="";
+document.getElementById("p1").innerHTML = "Course 1:";
+document.getElementById("p2").innerHTML = "Course 2:";
+document.getElementById("p3").innerHTML = "Course 3:";
+document.getElementById("p4").innerHTML = "Course 4:";
+}
+}
+}
+function function2()
+{
+input2 = document.getElementById('position').value;
+two = true;
+if(one==true&&two==true)
+{
+if(input1=="Undergraduate"&& input2=="Position 1")
+{
+document.getElementById("p1").innerHTML = "Course 1: CSE 3203 Mobile System Overview";
+document.getElementById("p2").innerHTML = "Course 2: IT 4213 Mobile Web Development";
+document.getElementById("p3").innerHTML = "Course 3: IT 4203 Advance Web Development";
+document.getElementById("p4").innerHTML = "Course 4: CGDD 4203 Mobile & Casual Game Development";
+
+}
+else if(input1== "Undergraduate"&&input2== "Position 2")
+{
+document.getElementById("p1").innerHTML = "Course 1: IT 4153 Advanced Database";
+document.getElementById("p2").innerHTML = "Course 2: IT 4713 BI Systems";
+document.getElementById("p3").innerHTML = "Course 3: IT 4723 IT Policy & Law";
+document.getElementById("p4").innerHTML = "Course 4: IT 4673 Virtual Systems";
+}
+else if(input1== "Graduate" && input2== "Position 1")
+{
+document.getElementById("p1").innerHTML = "Course 1: IT 6203 IT Design Studio";
+document.getElementById("p2").innerHTML = "Course 2: IT 6753 Advanced Web";
+document.getElementById("p3").innerHTML = "Course 3: IT 6763 Electronic Commerce";
+document.getElementById("p4").innerHTML = "Course 4: IT 6473 Multimedia Applications";
+}
+else if(input1== "Graduate" && input2== "Position 2")
+{
+document.getElementById("p1").innerHTML = "Course 1: IT 6713 Business Intelligence";
+document.getElementById("p2").innerHTML = "Course 2: IT 7113 Data Visualization";
+document.getElementById("p3").innerHTML = "Course 3: IT 6833 Wireless Security";
+document.getElementById("p4").innerHTML = "Course 4: IT 6583 Business Continuity Planning and Implementation";
+}
+else if(input1=="Please select")
+{
+one = false;
+input1="";
+document.getElementById("p1").innerHTML = "Course 1:";
+document.getElementById("p2").innerHTML = "Course 2:";
+document.getElementById("p3").innerHTML = "Course 3:";
+document.getElementById("p4").innerHTML = "Course 4:";
+}
+else if(input2=="Please select")
+{
+two = false;
+input2="";
+document.getElementById("p1").innerHTML = "Course 1:";
+document.getElementById("p2").innerHTML = "Course 2:";
+document.getElementById("p3").innerHTML = "Course 3:";
+document.getElementById("p4").innerHTML = "Course 4:";
+}
+else if(input2=="Please select" && input2 == "Please select")
+{
+one = false;
+two = false;
+input1="";
+input2="";
+document.getElementById("p1").innerHTML = "Course 1:";
+document.getElementById("p2").innerHTML = "Course 2:";
+document.getElementById("p3").innerHTML = "Course 3:";
+document.getElementById("p4").innerHTML = "Course 4:";
+}
+}
+}
+</script>
+</head>
+<body>
+<div class ="header">
+<a href="https://ccse.kennesaw.edu/it/">
+<img src="Images/ksu_logo.png" alt="ksu logo" width="350" height="150"class="center">
+</a>
+<h1>Center for Applied Research in Information Technology</h1>
+</br>
+</div>
+<div class="nav">
+<ul>
+<li><a href="index.html">Home</a></li>
+<li><a href="faculty.html">Faculty</a></li>
+<li><a href="resources.html">Resources</a></li>
+<li><a href="evaluation.html">Evaluation</a></li>
+</ul>
+</div>
+<div class="sidebar">
+<h2><u>Page Layout</u></h2>
+<ul>
+<li><p>Summer Internships</p></li>
+<li><p>Evaluation</p></li>
+<li><p>Contact Information</p></li>
+</ul>
+</div>
+<div class="main">
+<h2>Summer 2021 Internships</h2>
+<h3>Student Assistant Positions</h3>
+<p>The CARIT is a Research Center that provides high quality survey research, program evaluation, performance measurement, and experimental research using scientifically rigorous social science methods to better interact with local businesses and communities. The CARIT is a valuable resource for faculty in need of assistance for research projects, grants, and contracts. Hiring a Student Assistant now takes place in the Department of Career Planning and Development System. Student rely on career website for finding internships, part-time, and full-time jobs, and it is now home to student assistant positions to make the process seamless for our students. </p>
+<img src="Images/People-at-Work.jpg" alt="people" width="250" height="170" class="center">
+<p>Hiring process will take place in the Career Center, hiring managers will continue to work with Human Resources to on board new student assistants, select start dates, and to ensure they will be paid. CARIT has four student assistant positions open, including 2 Graduate and 2 Undergraduate positions. In order to be considered for a position, a student has to complete four courses and meet the minimum average grade requirements. </p>
+</div>
+<div class="main" id="link1">
+<h2>Student Evaluation Page</h2>
+<p>Please follow the instructions to complete the student profile and find out the eligibility to complete the application process.</p>
+<h3>Instructions to follow:</h3>
+<p>Step 1: Please select the Student Status from drop the down menu</p>
+<p>Step 2: Please select the Position Available from the drop down menu</p>
+<p>Step 3: Once you select the student status and position, you will be provided with the list of courses. Please select the appropriate grade for each course from the drop down list</p>
+<p>Step 4: Click on "Calculate" to check if you are eligible to apply for the position</p>
+<h3>Please select the information</h3>
+ <form name="initial information">
+<label for="student status">Student Status:</label>
+  <select name="student status" id="student status" onchange="function1()" autocomplete="off">
+    <option>Please select</option>
+    <option>Undergraduate</option>
+    <option>Graduate</option>
+  </select>
+ </br></br>
+  <label for="position">Position: </label>
+  <select name="position" id="position" onchange="function2()"autocomplete="off">
+    <option>Please select</option>
+    <option>Position 1</option>
+    <option>Position 2</option>
+  </select>
+  </form>
+  </br>
+   <select name="grade1" id="grade1" autocomplete="off">
+    <option value="4">Grade A</option>
+    <option value="3">Grade B</option>
+    <option value="2">Grade C</option>
+	<option value="1">Grade D</option>
+	<option value="0">Grade F</option>
+  </select>
+  <p id="p1" class="para">Course 1:</p></br></br>
+  <select name="grade2" id="grade2" autocomplete="off">
+    <option value="4">Grade A</option>
+    <option value="3">Grade B</option>
+    <option value="2">Grade C</option>
+	<option value="1">Grade D</option>
+	<option value="0">Grade F</option>
+  </select>
+  <p id="p2" class="para">Course 2:</p></br></br>
+  <select name="grade3" id="grade3" autocomplete="off">
+    <option value="4">Grade A</option>
+    <option value="3">Grade B</option>
+    <option value="2">Grade C</option>
+	<option value="1">Grade D</option>
+	<option value="0">Grade F</option>
+  </select>
+  <p id="p3" class="para">Course 3:</p></br></br>
+  <select name="grade4" id="grade4" autocomplete="off">
+    <option value="4">Grade A</option>
+    <option value="3">Grade B</option>
+    <option value="2">Grade C</option>
+	<option value="1">Grade D</option>
+	<option value="0">Grade F</option>
+  </select>
+  <p id="p4" class="para">Course 4:</p></br></br>
+   <button onclick="buttonclick()">Calculate</button></br></br>
+   <p id="p5" class="para"></p>
+</div>
+<div class="footer">
+<h2>University Contact</h2>
+<p><strong>Kennesaw Campus</strong></p>
+<p>1000 Chastain Road</p>
+<p>Kennesaw, GA 30144</p>
+<p>Phone: 470-578-6000</p>
+<p><strong>Marietta Campus</strong></p>
+<p>100 South Marietta Pkwy</p>
+<p>Marietta, GA 30060</p>
+<p>Phone: 470-578-6000</p>
+<p><em>2021. Disclaimer: This is a student project for IT 3203: Intro to Web Development</em><p>
+</div>
+</body>
+</html>
